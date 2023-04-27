@@ -1,0 +1,12 @@
+.website {
+    padding: 40px;
+}
+
+.website p,
+.website h2 {
+    text-align: left;
+}
+
+.website img{
+    max-width: 100%;
+}

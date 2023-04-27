@@ -1,0 +1,9 @@
+.timer {
+    padding: 40px;
+    user-select: text;
+}
+
+.timer h2,
+.timer p {
+    text-align: left;
+}

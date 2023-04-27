@@ -1,0 +1,434 @@
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #222;
+    color: rgb(198, 198, 198);
+    text-align: center;
+    font-family: monospace;
+    font-size: 0.95rem;
+    cursor: default;
+    user-select: none;
+    height: 100vh;
+}
+
+#loading {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    position: fixed;
+    background-color: #222;
+    color: #141313;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background-color: #111;
+    font-size: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 750px;
+    padding-top: .5rem;
+    font-size: 1.2rem;
+    margin: 1rem auto 0px;
+}
+
+nav div {
+    width: 100%;
+    padding: .75rem 0;
+    cursor: pointer;
+    background-color: #333;
+    margin: 0px 5px;
+    border-radius: 20px 20px 0 0;
+    color: rgb(174, 174, 174);
+}
+
+.myActive {
+    color: rgb(54, 155, 155);
+    background-color: #222;
+}
+
+
+.button {
+    display: grid;
+    padding: .8rem 1.5rem;
+    background-color: #444;
+    border-radius: 1rem;
+    flex: 1 1 100px;
+    place-items: center;
+    margin: .8rem;
+    cursor: pointer;
+}
+
+.myActive.button,
+.myActive.button2 {
+    background-color: rgb(0, 128, 128);
+    color: rgb(216, 216, 216);
+}
+
+.page {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.box {
+    margin-top: 1.5rem;
+}
+
+.box:first-child {
+    margin: 0px;
+}
+
+@media only screen and (max-width: 500px) {
+
+    header,
+    .box .namePlate {
+        font-size: 1rem;
+    }
+
+    #wifiPwd,
+    #wifiPage #wifiPwd input,
+    #wifiPwd .saveWifi,
+    nav,
+    #colorPicker .colorPicker,
+    #colorPicker .colorPicker .key,
+    #colorTabs .colorTabs,
+    .button {
+        font-size: .65rem;
+    }
+
+    #toggleBtn {
+        font-size: .75rem;
+        flex-wrap: nowrap;
+    }
+
+    .messagesBtns {
+        width: 100%;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+    }
+
+    body #settingsPage {
+        width: 100vw;
+    }
+
+    #settingsPage .button {
+        font-size: 1.2rem;
+    }
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.button:active,
+.button2:active {
+    background-color: rgb(0, 128, 128);
+}
+
+#colorTabs {
+    background-color: #222;
+    display: flex;
+    gap: 5px;
+    margin: -10px;
+    margin-bottom: 30px;
+
+}
+
+.colorTabs {
+    background-color: #333;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    font-size: 1.1rem;
+    flex: 1;
+    cursor: pointer;
+}
+
+.myActive.colorTabs {
+    background-color: #444;
+    color: rgb(64, 190, 190);
+}
+
+#color {
+    background-color: #444;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#colorPickBox {
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin-top: 10px;
+}
+
+#colorPick {
+    position: absolute;
+    background-color: red;
+    padding: 0;
+    border: 0;
+    width: 0;
+    height: 0px;
+    top: 7px;
+    left: calc(50% - 117px);
+}
+
+label {
+    width: fit-content;
+}
+
+.colorBox {
+    display: flex;
+    margin: 5px 0;
+    place-items: center;
+}
+
+.colorBox label {
+    width: 100px;
+    vertical-align: baseline;
+    font-size: 1.2rem;
+}
+
+.red,
+#redNum,
+#redRange {
+    color: red;
+    accent-color: red;
+}
+
+.blue,
+#blueNum,
+#blueRange {
+    color: rgb(55, 104, 253);
+    accent-color: rgb(55, 104, 253);
+}
+
+.green,
+#greenNum,
+#greenRange {
+    color: rgb(5, 169, 5);
+    accent-color: rgb(0, 153, 0);
+}
+
+.colorBtns {
+    display: flex;
+}
+
+.namePlate {
+    font-size: 1.5rem;
+    color: rgb(54, 155, 155);
+}
+
+.colorBox input[type=range] {
+    width: 75%;
+    cursor: grab;
+}
+
+.colorBox input[type=range]:active {
+    cursor: grabbing;
+}
+
+.colorBox input[type=number] {
+    background-color: #222;
+    border: none;
+    margin-right: 5px;
+    padding: 5px;
+    width: 60px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#colorPicker {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#colorPicker .key {
+    font-size: 1.2rem;
+    color: rgb(20, 165, 165);
+    font-weight: bold;
+    margin: 5px;
+}
+
+.colorPicker {
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: calc(50% - 20px);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box .namePlate .animationTimes {
+    margin-left: -10px;
+    padding: 6px 2px 6px 4px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80px;
+}
+
+/*----message box-----------------------------------------*/
+.blackOut {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    position: fixed;
+    background-color: #111111e7;
+    width: 100vw;
+    height: 100vh;
+    place-items: center;
+}
+
+#colorMsgBox {
+    display: none;
+    flex-wrap: wrap;
+    background-color: rgb(34, 104, 104);
+    max-width: 750px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.colorMsg {
+    background-color: #222;
+    width: 8rem;
+    cursor: pointer;
+    margin: 10px;
+    padding: 15px;
+    white-space: nowrap;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+/*--animationPage-----------------------------------------*/
+.namePlate input[type=number] {
+    background-color: #444;
+    color: rgb(145, 145, 145);
+    border: none;
+    /* margin-right: 5px; */
+    /* padding: 5px; */
+    width: 60px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+/*--Messages--------------------------------------------*/
+#messagesPage {
+    display: none;
+    height: 1005vh;
+    width: 100%;
+}
+
+#messagesBox {
+    display: block;
+    height: calc(100vh - 13rem);
+} 
+
+#debugDisplay{
+    background-color: rgb(17, 68, 112);
+    border-radius: 8px;
+    padding: 1rem;
+    height: calc(100% - 6rem);
+    overflow: auto;
+} 
+
+.messagesBtns {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+}
+
+.btnEnabled {
+    background-color: rgb(18, 156, 156);
+    color: #222;
+    font-weight: bold;
+}
+
+/*--wifiPage -----------------------------------------*/
+#wifiPage {
+    display: none;
+    width: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 10px; */
+}
+
+.wifiList {
+    font-size: 1.4rem;
+    background-color: #444;
+    padding: 10px 0;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#wifiPwd button {
+    background-color: rgb(5, 86, 84);
+    color: rgb(198, 198, 198);
+    padding: 10px;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 10px;
+}
+
+#wifiPwd input {
+    border-radius: 10px;
+    background-color: #333;
+    color: rgb(184, 184, 184);
+    padding: 10px;
+    border: none;
+    flex: 1;
+    font-size: 1.4rem;
+}
+
+#wifiPwd {
+    display: none;
+    padding: 0px 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+.wifiMsgBox {
+    display: none;
+    position: fixed;
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 100vw;
+    top: 40vh;
+    left: 0;
+    color: rgb(0, 255, 251);
+}
+
+#scanWifi {
+    background-color: rgb(5, 86, 84);
+    margin-top: 20px;
+}
+
+/*--settingsPage -----------------------------------------*/
+#settingsPage {
+    display: none;
+    width: 30%;
+    font-size: 1.2rem;
+}

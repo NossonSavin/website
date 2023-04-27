@@ -1,0 +1,8 @@
+.snake {
+    padding: 40px;
+}
+
+.snake p,
+.snake h2 {
+    text-align: left;
+}

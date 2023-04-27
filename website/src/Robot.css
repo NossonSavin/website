@@ -1,0 +1,9 @@
+.robot {
+    padding: 40px;
+    user-select: text;
+}
+
+.robot p,
+.robot h2 {
+    text-align: left;
+}

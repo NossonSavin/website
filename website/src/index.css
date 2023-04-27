@@ -1,0 +1,47 @@
+body {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(1, 64, 77) 30% 50%, rgb(1, 64, 77) 70%, rgba(0, 0, 0, 1) 100%);
+  text-align: center;
+  color: #999;
+  margin: 0;
+  font-family: monospace, 'Courier New', Courier;
+}
+
+header {
+  height: 5.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: -1.5px 1.5px 3px rgb(11, 117, 108);
+  color: rgb(5, 22, 30);
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+#pageData {
+  width: 95%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-color: #222;
+  max-width: 1200px;
+  min-height: calc(100vh - 5.5rem - 2rem);
+  margin: 0px 2rem;
+}
+
+#page{
+  display: grid;
+  place-items: center;
+  padding-bottom: 2rem;
+}
+
+a {
+  color: rgb(201, 200, 200);
+  display: block;
+  text-align: left;
+} 
+
+img{
+  width: 100%;
+	max-width: 600px;
+  margin-top: 20px;
+}

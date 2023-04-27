@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosson's ESP-32 Clock</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>ESP-32 Clock
+        <nav></nav>
+    </header>
+
+    <div class="blackOut">
+        <div id="colorMsgBox"></div>
+
+        <div id="loading">loading...</div>
+    </div>
+
+    <div id="display" class="page">
+
+        <div class="box">
+            <div class="namePlate">Animation Type</div>
+            <div id="animationBtns" class="colorBtns wrap"></div>
+        </div>
+
+        <div class="box">
+            <div class="namePlate">Toggle Buttons</div>
+            <div id="toggleBtn" class="colorBtns wrap"></div>
+        </div>
+
+        <div class="box flex">
+            <label class="namePlate">Animation Delay (s) <input type="number" id="animationDelay"
+                    class="animationTimes"></label>
+            <label class="namePlate">Animation Speed (ms) <input type="number" id="animationSpeed"
+                    class="animationTimes"></label>
+        </div>
+
+        <div id="colorPicker" class="box"></div>
+
+        <div class="box">
+
+            <div id="color">
+                <div id="colorTabs"></div>
+
+                <div class="colorBox">
+                    <label class="red">Red</label>
+                    <input type="number" min="0" max="255" data-elemData="1" class="colorPick" id="redNum">
+                    <input type="range" min="0" max="255" data-elemData="0" class="colorPick" id="redRange">
+                </div>
+
+                <div class="colorBox">
+                    <label class="green">Green</label>
+                    <input type="number" min="0" max="255" data-elemData="3" class="colorPick" id="greenNum">
+                    <input type="range" min="0" max="255" data-elemData="2" class="colorPick" id="greenRange">
+                </div>
+
+                <div class="colorBox">
+                    <label class="blue">Blue</label>
+                    <input type="number" min="0" max="255" data-elemData="5" class="colorPick" id="blueNum">
+                    <input type="range" min="0" max="255" data-elemData="4" class="colorPick" id="blueRange">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div id="animationPage" class="page">
+        <div class="box">
+            <div class="namePlate">Animation Type</div>
+            <div id="animationBtns" class="colorBtns wrap"></div>
+        </div>
+        
+        <label>Animation Speed <input type="number" id="animationSpeed"></label>
+    </div> -->
+
+    <div id="messagesPage" class="page">
+        <div id="messagesBox">
+            <pre id="debugDisplay"></pre>
+            <div class="messagesBtns">
+                <div class="button btn" data-elemData="wifi">WiFi</div>
+                <div class="button btn" data-elemData="getIP">Get IP</div>
+                <div class="button btn" data-elemData="getTemp">Get Temperature</div>
+                <div class="button btn" data-elemData="autoscroll">AutoScroll</div>
+                <div class="button debugPrint">Start</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wifiPage" class="page">
+        <div id="wifiList"></div>
+        <p class="wifiMsgBox">Scanning Networs</p>
+
+        <form class="wifiPwd wifiList" id="wifiPwd">
+            <div>Password</div>
+            <input type="text" spellcheck="false">
+            <button class="saveWifi">Save</button>
+        </form>
+
+        <div class="scanWifi wifiList" id="scanWifi">Scan Wifi</div>
+    </div>
+
+    <div id="settingsPage" class="page">
+        <div class="button btn" data-elemData="reset">Reset ESP</div>
+        <div class="button btn" data-elemData="accessPoint">Toggle Access Point</div>
+        <div class="button btn" data-elemData="sendTime">Send Time and Date</div>
+        <div class="button btn" data-elemData="save">Save Settings</div>
+        <div class="button btn" data-elemData="load">Load Settings</div>
+        <div class="button btn" data-elemData="default">Default Settings</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

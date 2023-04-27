@@ -1,0 +1,9 @@
+.clock {
+    padding: 40px;
+    user-select: text;
+}
+
+.clock h2,
+.clock p {
+    text-align: left;
+}

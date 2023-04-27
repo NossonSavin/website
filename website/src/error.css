@@ -1,0 +1,15 @@
+.errorMsg {
+    position: relative;
+    top: 45%;
+}
+
+#error {
+    color: rgb(176, 2, 2);
+    font-size: 1.5em;
+    
+}
+
+#error a {
+    text-align: center;
+    color: rgb(7, 107, 144);
+}
