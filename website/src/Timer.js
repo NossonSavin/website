@@ -4,7 +4,7 @@ import './timer.css'
 export default function Timer() {
     return (
         <div className="timer">
-            <h2>Digital Wall Clock</h2>
+            <h2>Windows Delay Shutdown Timer</h2>
 
             <p>This is a Windows delay shutdown timer written in C#(windows form app).</p>
 
